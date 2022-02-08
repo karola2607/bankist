@@ -8,6 +8,7 @@
     "element-permitted-content": "off",
     "void-style": "off",
     "wcag/h32": "off",
-    "element-required-attributes": "off"
+    "element-required-attributes": "off",
+    "svg-focusable": "off"
   }
 }
