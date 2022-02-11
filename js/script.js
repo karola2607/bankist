@@ -1,5 +1,8 @@
 'use strict';
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
 ///////////////////////////////////////
 // Modal window
 
@@ -30,6 +33,28 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+// Button scrolling
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Page navigation
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 //////////////////////////////////////
 /////////////////////////////////////
 
@@ -46,7 +71,6 @@ console.log(allButtons);
 console.log(document.getElementsByClassName('btn'));
 
 // Creating and inserting elements
-// .insertAdjacentHTML
 
 const message = document.createElement('div');
 message.classList.add('cookie-message');
@@ -62,21 +86,3 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
-
-//Smooth scroll
-
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
-
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
-
-  /*window.scrollTo({
-    left: s1coords.left + window.pageXOffset,
-    top: s1coords.top + window.pageYOffset,
-    behavior: 'smooth',
-  });*/
-  section1.scrollIntoView({ behavior: 'smooth' });
-});

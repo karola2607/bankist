@@ -114,12 +114,9 @@ img {
 
 /* NAVIGATION */
 .nav {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 9rem;
   width: 100%;
   padding: 0 6rem;
@@ -138,10 +135,8 @@ img {
 }
 
 .nav__links {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   list-style: none;
 }
 
@@ -178,31 +173,21 @@ img {
 .header {
   padding: 0 3rem;
   height: 100vh;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header__title {
-  -ms-flex: 1;
-      flex: 1;
+  flex: 1;
   max-width: 115rem;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 2fr;
-      grid-template-columns: 3fr 2fr;
+  grid-template-columns: 3fr 2fr;
   row-gap: 3rem;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: start;
-      align-items: start;
-  -ms-grid-column-align: start;
-      justify-items: start;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
+  justify-items: start;
 }
 
 h1 {
@@ -218,9 +203,7 @@ h4 {
 .header__img {
   width: 100%;
   grid-column: 2 / 3;
-  -ms-grid-row-span: 4;
-  -ms-grid-row: 1;
-      grid-row: 1 / span 4;
+  grid-row: 1 / span 4;
   transform: translateY(-6rem);
 }
 
@@ -244,10 +227,8 @@ h4 {
 
 /* FEATURES */
 .features {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin: 0 12rem;
 }
@@ -257,21 +238,16 @@ h4 {
 }
 
 .features__feature {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   justify-self: center;
   width: 70%;
   font-size: 1.5rem;
 }
 
 .features__icon {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-primary-opacity);
   height: 5.5rem;
   width: 5.5rem;
@@ -298,10 +274,8 @@ h4 {
 }
 
 .operations__tab-container {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
 }
 
 .operations__tab {
@@ -344,10 +318,8 @@ h4 {
 }
 
 .operations__content--active {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 7rem 1fr;
-      grid-template-columns: 7rem 1fr;
+  grid-template-columns: 7rem 1fr;
   column-gap: 3rem;
   row-gap: 0.5rem;
 }
@@ -355,18 +327,13 @@ h4 {
 .operations__header {
   font-size: 2.25rem;
   font-weight: 500;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .operations__icon {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
@@ -378,8 +345,7 @@ h4 {
 }
 
 .operations__content p {
-  -ms-grid-column: 2;
-      grid-column: 2;
+  grid-column: 2;
 }
 
 .operations__icon--1 {
@@ -421,12 +387,9 @@ h4 {
   top: 0;
   width: 100%;
   height: 50rem;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   /* THIS creates the animation! */
   transition: transform 1s;
 }
@@ -435,8 +398,7 @@ h4 {
   /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slider__btn {
@@ -469,7 +431,6 @@ h4 {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -530,17 +491,13 @@ h4 {
 .testimonial__author {
   margin-left: 3rem;
   font-style: normal;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 6.5rem 1fr;
-      grid-template-columns: 6.5rem 1fr;
+  grid-template-columns: 6.5rem 1fr;
   column-gap: 2rem;
 }
 
 .testimonial__photo {
-  -ms-grid-row-span: 2;
-  -ms-grid-row: 1;
-      grid-row: 1 / span 2;
+  grid-row: 1 / span 2;
   width: 6.5rem;
   border-radius: 50%;
 }
@@ -548,9 +505,7 @@ h4 {
 .testimonial__name {
   font-size: 1.7rem;
   font-weight: 500;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+  align-self: end;
   margin: 0;
 }
 
@@ -593,10 +548,8 @@ h4 {
 
 .footer__nav {
   list-style: none;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   margin-bottom: 5rem;
 }
 
@@ -648,8 +601,7 @@ h4 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 100;
   transition: all 0.5s;
 }
@@ -662,12 +614,9 @@ h4 {
 
 .modal__form {
   margin: 0 3rem;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  -ms-flex-align: center;
-      align-items: center;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -684,9 +633,7 @@ h4 {
 }
 
 .modal__form button {
-  -ms-grid-column-span: 2;
-  -ms-grid-column: 1;
-      grid-column: 1 / span 2;
+  grid-column: 1 / span 2;
   justify-self: center;
   margin-top: 1rem;
 }
@@ -710,16 +657,14 @@ h4 {
 
 /* COOKIE MESSAGE */
 .cookie-message {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100%;
   background-color: white;
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
 }
+
 /*# sourceMappingURL=style.css.map */
