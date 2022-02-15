@@ -11,6 +11,12 @@ const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
 
+const header = document.querySelector('.header');
+
+const allSections = document.querySelectorAll('.section');
+
+const allButtons = document.getElementsByTagName('button');
+
 ///////////////////////////////////////
 // Modal window
 
@@ -104,15 +110,27 @@ window.addEventListener('scroll', function (e) {
   else nav.classList.remove('sticky');
 });
 
+// Reveal sections
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 //////////////////////////////////////
 /////////////////////////////////////
-
-const header = document.querySelector('.header');
-
-const allSections = document.querySelectorAll('.section');
-
-document.getElementById('section--1');
-const allButtons = document.getElementsByTagName('button');
 
 // Creating and inserting elements
 
